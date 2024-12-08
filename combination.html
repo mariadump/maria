@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>using combination.html</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: rgb(255, 154, 179);
+            text-align: center;
+            width: 100%;
+        }
+
+        .heart {
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            transform: rotate(-45deg);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .heart::before, 
+        .heart::after {
+            content: "";
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+
+        button {
+            background-color: pink;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+
+        button:hover {
+            background-color: mistyrose;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+    <button onclick="miss()">Click Me</button>
+    </div>
+    <h1 id="hello">Hello Love</h1>
+</body>
+<script>
+    function miss(){
+        alert("i miss you so much");
+        document.getElementById("hello").innerHTML="I love you";
+        console.log("Take care always");
+    }
+</script>
+</html>
